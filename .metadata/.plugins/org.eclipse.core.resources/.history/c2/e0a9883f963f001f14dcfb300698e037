@@ -1,0 +1,11 @@
+package myathentique;
+
+public class server {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String url= "http://localhost:1234/";
+		Endpoint.publish(url, new Authentification());
+	}
+
+}

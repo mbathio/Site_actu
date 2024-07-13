@@ -1,0 +1,188 @@
+package serviceWebSoap;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import mangone.InscriptionPage;
+import mangone.Override;
+
+import java.awt.Color;
+import javax.swing.JSeparator;
+import javax.swing.JButton;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JTextPane;
+import javax.swing.JTable;
+import javax.swing.JTabbedPane;
+import javax.swing.JLabel;
+import javax.swing.border.TitledBorder;
+import javax.swing.JTextField;
+import javax.swing.JTextArea;
+import javax.swing.border.EtchedBorder;
+
+public class GestionUser extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JTable table;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					GestionUser frame = new GestionUser();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public GestionUser() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 898, 439);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(192, 192, 192));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(0, 0, 882, 60);
+		panel.setBackground(new Color(255, 255, 255));
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		JSeparator separator = new JSeparator();
+		separator.setBounds(22, 47, 839, 2);
+		panel.add(separator);
+
+		
+		
+		
+		JTextPane txtpnGestionDesEtudiants = new JTextPane();
+		txtpnGestionDesEtudiants.setFont(new Font("Tahoma", Font.ITALIC, 24));
+		txtpnGestionDesEtudiants.setForeground(new Color(0, 0, 0));
+		txtpnGestionDesEtudiants.setBackground(new Color(255, 255, 255));
+		txtpnGestionDesEtudiants.setText("Gestion des Etudiants");
+		txtpnGestionDesEtudiants.setBounds(46, 11, 246, 38);
+		panel.add(txtpnGestionDesEtudiants);
+		
+		table = new JTable();
+		table.setBounds(366, 71, 506, 314);
+		contentPane.add(table);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		panel_1.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "User", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(51, 153, 153)));
+		panel_1.setBounds(10, 71, 346, 318);
+		contentPane.add(panel_1);
+		panel_1.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Prenom:");
+		lblNewLabel.setFont(new Font("Sylfaen", Font.PLAIN, 15));
+		lblNewLabel.setBounds(10, 27, 89, 22);
+		panel_1.add(lblNewLabel);
+		
+		JLabel lblNom = new JLabel("Nom:");
+		lblNom.setFont(new Font("Sylfaen", Font.PLAIN, 15));
+		lblNom.setBounds(10, 60, 89, 22);
+		panel_1.add(lblNom);
+		
+		JLabel lblGenre = new JLabel("Genre:");
+		lblGenre.setFont(new Font("Sylfaen", Font.PLAIN, 15));
+		lblGenre.setBounds(10, 90, 89, 22);
+		panel_1.add(lblGenre);
+		
+		JLabel lblCite = new JLabel("Cite:");
+		lblCite.setFont(new Font("Sylfaen", Font.PLAIN, 15));
+		lblCite.setBounds(10, 123, 89, 22);
+		panel_1.add(lblCite);
+		
+		JLabel lblDate = new JLabel("Date de naissance:");
+		lblDate.setFont(new Font("Sylfaen", Font.PLAIN, 15));
+		lblDate.setBounds(10, 156, 89, 22);
+		panel_1.add(lblDate);
+		
+		JLabel lblAdresse = new JLabel("Adresse:");
+		lblAdresse.setFont(new Font("Sylfaen", Font.PLAIN, 15));
+		lblAdresse.setBounds(10, 189, 89, 22);
+		panel_1.add(lblAdresse);
+		
+		textField = new JTextField();
+		textField.setBounds(78, 26, 223, 23);
+		panel_1.add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		textField_1.setBounds(78, 60, 223, 23);
+		panel_1.add(textField_1);
+		
+		textField_2 = new JTextField();
+		textField_2.setColumns(10);
+		textField_2.setBounds(78, 89, 223, 23);
+		panel_1.add(textField_2);
+		
+		textField_3 = new JTextField();
+		textField_3.setColumns(10);
+		textField_3.setBounds(78, 122, 223, 23);
+		panel_1.add(textField_3);
+		
+		textField_4 = new JTextField();
+		textField_4.setColumns(10);
+		textField_4.setBounds(109, 155, 223, 23);
+		panel_1.add(textField_4);
+		
+		JTextArea textArea = new JTextArea();
+		textArea.setBounds(88, 186, 223, 57);
+		panel_1.add(textArea);
+		
+		JButton btnNewButton = new JButton("Ajouter");
+		btnNewButton.setBounds(88, 250, 89, 23);
+		panel_1.add(btnNewButton);
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		btnNewButton.setBackground(new Color(255, 255, 255));
+		
+		JButton btnNewButton_1 = new JButton("Supprimer");
+		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		btnNewButton_1.setBackground(Color.WHITE);
+		btnNewButton_1.setBounds(88, 284, 89, 23);
+		panel_1.add(btnNewButton_1);
+		
+		JButton btnModifier = new JButton("Modifier");
+		btnModifier.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		btnModifier.setBackground(Color.WHITE);
+		btnModifier.setBounds(212, 250, 89, 23);
+		panel_1.add(btnModifier);
+		
+		JButton btnNewButton_1_1 = new JButton("Effacer");
+		btnNewButton_1_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		btnNewButton_1_1.setBackground(Color.WHITE);
+		btnNewButton_1_1.setBounds(212, 284, 89, 23);
+		panel_1.add(btnNewButton_1_1);
+	
+	}
+
+	
+}
+
+

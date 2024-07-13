@@ -1,0 +1,14 @@
+
+import javax.ws.rs.ApplicationPath;
+
+public class sSoapServer {
+
+	
+
+	public static void main(String[] args) {
+		String url= "http://localhost:1234/";
+		Endpoint.publish(url, new Authentification());
+
+	}
+
+}
